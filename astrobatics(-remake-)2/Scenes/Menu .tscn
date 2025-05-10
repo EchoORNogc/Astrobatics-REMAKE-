@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy0nv4nixjrtp"]
+
+[ext_resource type="Script" path="res://Scripts/button.gd" id="1_avvsx"]
+[ext_resource type="Texture2D" uid="uid://jkvuvw4bw8ie" path="res://Sprites/2.png" id="2_jui60"]
+[ext_resource type="Texture2D" uid="uid://ce1hfx8auj0ay" path="res://Sprites/astrobatics.png" id="3_0fnms"]
+
+[node name="Node" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 624.0
+offset_top = -94.0
+offset_right = 825.0
+offset_bottom = -25.0
+action_mode = 0
+text = "Start"
+script = ExtResource("1_avvsx")
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-21.5, -12)
+scale = Vector2(4.3225, 5.11)
+texture = ExtResource("2_jui60")
+
+[node name="Astrobatics" type="Sprite2D" parent="."]
+position = Vector2(-330, -332)
+scale = Vector2(4.0232, 4.0232)
+texture = ExtResource("3_0fnms")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

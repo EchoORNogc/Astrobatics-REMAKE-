@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2kjibewqqbxx"]
+
+[ext_resource type="PackedScene" uid="uid://4ffm55w50aoe" path="res://Scenes/Player.tscn" id="1_orbtu"]
+[ext_resource type="Texture2D" uid="uid://sy7l5lq2aryr" path="res://Sprites/Platypus_Artwork_2.webp" id="1_r8gop"]
+
+[node name="Node" type="Node"]
+
+[node name="PlatypusArtwork2" type="Sprite2D" parent="."]
+position = Vector2(-2, 2.47955e-05)
+scale = Vector2(1.69805, 1.76199)
+texture = ExtResource("1_r8gop")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_orbtu")]
+position = Vector2(-373, -4)
